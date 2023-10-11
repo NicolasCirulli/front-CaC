@@ -11,6 +11,8 @@ const Carousel = () => {
     axios("https://mindhub-xj03.onrender.com/api/amazing")
       .then((data) => setDataEvents(data.data.events.slice(0, 4)))
       .catch((err) => console.log(err));
+
+    return () => console.log("Se desmonto el componente");
   }, []);
 
   useEffect(() => {
